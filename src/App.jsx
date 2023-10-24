@@ -5,6 +5,7 @@ import './App.css'
 import NavBar from './Components/NavBar'
 import { Route, Routes } from 'react-router-dom'
 import Signup from './Pages/Signup/Signup'
+import Login from './Pages/Login/Login'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
       <Route path='/contact' element={<h1>Ayan contact</h1>} />
       <Route path='/about' element={<h1>Ayan about</h1>} />
       <Route path='/signup' element={<Signup/>} />
+      <Route path='/login' element={<Login/>} />
       <Route path='*' element={<h1>not Found</h1>} />
     </Routes>
     <h1>Ayan</h1>
