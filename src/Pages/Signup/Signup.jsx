@@ -4,14 +4,29 @@ import { Link } from "react-router-dom";
 
 const Signup = () => {
 
-    const [firstName, setFirstName] = useState("")
-    const [lastName, setLastName] = useState("")
+    const [firstName, setFirstName] = useState()
+    const [lastName, setLastName] = useState()
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const [age, setAge] = useState()
     const [phoneNumber, setPhoneNumber] = useState()
+    const [gender, setGender] = useState()
 
-    // console.log(lastName)
+    // console.log(gender)
+const onsubmit =()=>{
+
+
+    if(!firstName
+      ||!lastName
+      ||!email
+      ||!password
+      ||!age
+      ||!phoneNumber
+      ||!gender){
+
+        alert("Required Fields Are missing")
+      }
+    }
 
 
   return (
@@ -69,8 +84,8 @@ const Signup = () => {
       <RadioGroup
         aria-labelledby="demo-controlled-radio-buttons-group"
         name="controlled-radio-buttons-group"
-        // value={value}
-        // onChange={handleChange}
+        // value={s}
+        onChange={(e)=>{setGender(e.target.value)}}
       >
         <FormControlLabel value="female" control={<Radio />} label="Female" />
         <FormControlLabel value="male" control={<Radio />} label="Male" />
